@@ -45,6 +45,35 @@ Store the new interaction in Hindsight
 ↓  
 Improve future responses
 
+## 🧠 How Hindsight Memory Is Used
+
+MemoryShield uses **Hindsight** as its persistent memory system.
+
+For every customer interaction:
+
+1. **Recall** — Hindsight retrieves relevant previous interactions for the customer.
+2. **Personalize** — The AI uses the recalled information to understand the customer's history and previous troubleshooting attempts.
+3. **Respond** — Groq generates a personalized support response using the current problem and relevant past context.
+4. **Retain** — The new customer interaction and AI response are stored back into Hindsight.
+5. **Improve** — During future interactions, the stored context can be recalled to provide more relevant support.
+
+### Example
+
+**Interaction 1:**  
+Ananya reports that her Wi-Fi disconnects every evening.
+
+**Interaction 2:**  
+Ananya says the problem happened again and that restarting the router did not help.
+
+MemoryShield recalls the previous interaction and avoids blindly repeating the same troubleshooting step.
+
+**Interaction 3:**  
+Ananya explains that the issue happens around 7 PM during online classes and mainly affects her laptop.
+
+MemoryShield uses the accumulated context to provide more specific troubleshooting suggestions.
+
+This demonstrates how the agent can **remember, recall, and improve over multiple interactions using Hindsight memory.**
+
 ## 🛠️ Technology Stack
 
 - Python
@@ -81,18 +110,23 @@ This demonstrates how the agent becomes more personalized through repeated inter
 ## ⭐ Key Features
 
 ### Persistent Memory
+
 Stores customer interactions using Hindsight.
 
 ### Customer-Specific Recall
+
 Retrieves memories relevant to the current customer.
 
 ### Personalized Support
+
 Uses previous interactions to improve responses.
 
 ### Learning Over Time
+
 The agent becomes more context-aware as more interactions are stored.
 
 ### Memory Visibility
+
 The interface shows the previous memories used to generate the response.
 
 ## 🏗️ Architecture
